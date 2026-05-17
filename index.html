@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI HR Screening System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <div id="toast" class="toast"></div>
+
+  <header class="header">
+    <div class="header-brand">
+      <div class="logo-mark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-tag">AI-Powered Screening</div>
+        <div class="brand-title">HR Intelligence</div>
+      </div>
+    </div>
+    <nav class="nav" id="main-nav">
+      <button type="button" class="nav-btn active" data-view="dashboard">
+        <span class="nav-icon"></span> Dashboard
+      </button>
+      <button type="button" class="nav-btn" data-view="add">
+        <span class="nav-icon"></span> Add Candidate
+      </button>
+      <button type="button" class="nav-btn hidden" id="nav-result" data-view="result">
+        <span class="nav-icon"></span> Last Result
+      </button>
+      <button type="button" class="nav-btn" data-view="api">
+        <span class="nav-icon"></span> API Docs
+      </button>
+    </nav>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="main-content" class="main"></main>
+
+  <footer class="footer">
+    <span>AI Resume Screening · FastAPI</span>
+    <span class="footer-meta">TOTAL CANDIDATES : <span id="footer-count">IQRA WASEEM</span></span>
+  </footer>
+
+  <script src="/js/constants.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/ui.js?v=1.1"></script>
+  <script src="/js/app.js?v=1.1"></script>
+</body>
+</html>
